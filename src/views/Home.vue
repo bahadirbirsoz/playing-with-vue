@@ -1,7 +1,10 @@
 <template>
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App" @btnclick="hwButtonClicked"/>
+    <HelloWorld msg="I am a prop"/>
+    <HelloWorld msg="You can use me with @prop"/>
+    <HelloWorld msg="When prop changes, component re-renders"/>
 
   </div>
 </template>
@@ -15,5 +18,11 @@ import HelloWorld from '@/components/HelloWorld.vue'; // @ is an alias to /src
     HelloWorld,
   },
 })
-export default class Home extends Vue {}
+export default class Home extends Vue {
+
+  hwButtonClicked(){
+    alert("asd");
+  }
+
+}
 </script>
