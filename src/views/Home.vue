@@ -1,5 +1,7 @@
 <template>
-  <hello-world />
+  <div>
+    <v-btn @click="$router.push('/about')">About</v-btn>
+  </div>
 </template>
 
 <script lang="ts">
